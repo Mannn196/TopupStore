@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Up Honor of Kings - GemoyTopUpSTORE</title>
+    <style>
+        :root { --primary: #ff6b81; --secondary: #2f3542; --dark: #1e2229; --card-bg: #262c36; --light: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--dark); color: var(--light); padding-bottom: 50px; }
+        nav { background-color: var(--secondary); padding: 10px 5%; display: flex; align-items: center; border-bottom: 3px solid var(--primary); }
+        .logo-container { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-img { width: 45px; height: 45px; object-fit: cover; border-radius: 50%; border: 2px solid var(--primary); }
+        nav .logo-text { font-size: 22px; font-weight: bold; color: var(--primary); }
+        .order-container { max-width: 1100px; margin: 30px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 2fr; gap: 25px; }
+        @media (max-width: 768px) { .order-container { grid-template-columns: 1fr; } }
+        .game-info-box { background-color: var(--card-bg); padding: 25px; border-radius: 16px; text-align: center; height: fit-content; }
+        .game-info-box img { width: 150px; height: 150px; object-fit: cover; border-radius: 16px; margin-bottom: 15px; border: 2px solid var(--primary); }
+        .game-info-box h2 { margin-bottom: 10px; font-size: 22px; }
+        .game-info-box p { font-size: 14px; color: #a4b0be; text-align: left; line-height: 1.6; }
+        .form-section { background-color: var(--card-bg); padding: 20px; border-radius: 16px; margin-bottom: 20px; border-left: 5px solid var(--primary); }
+        .form-section h3 { font-size: 18px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .step-num { background-color: var(--primary); color: white; width: 25px; height: 25px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold; }
+        .input-group { display: flex; gap: 15px; }
+        .input-group input { flex: 1; padding: 12px; border-radius: 8px; border: 1px solid #4b5563; background-color: var(--dark); color: white; font-size: 16px; }
+        .nominal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+        .nominal-card { background-color: var(--dark); border: 1px solid #4b5563; padding: 15px; border-radius: 10px; text-align: center; cursor: pointer; transition: 0.2s; }
+        .nominal-card:hover, .nominal-card.active { border-color: var(--primary); background-color: rgba(255, 107, 129, 0.1); }
+        .nominal-card h4 { font-size: 14px; margin-bottom: 5px; }
+        .nominal-card p { font-size: 12px; color: var(--primary); font-weight: bold; }
+        .payment-list { display: flex; flex-direction: column; gap: 10px; }
+        .payment-item { background-color: var(--dark); border: 1px solid #4b5563; padding: 15px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+        .payment-item:hover, .payment-item.active { border-color: var(--primary); }
+        .btn-submit { background-color: var(--primary); color: white; border: none; width: 100%; padding: 15px; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 15px rgba(255, 107, 129, 0.4); }
+        .btn-submit:hover { background-color: #ff4757; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-container">
+            <img src="https://i.ibb.co/n8NL5x2k/image.png" alt="Logo" class="logo-img">
+            <span class="logo-text">GemoyTopUpSTORE</span>
+        </a>
+    </nav>
+    <div class="order-container">
+        <div class="game-info-box">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=300" alt="HOK">
+            <h2>Honor of Kings</h2>
+            <p>Top up Tokens Honor of Kings (HOK) paling murah, aman, dan bergaransi resmi hanya di GemoyTopUpSTORE. Proses instan otomatis masuk ke akun kamu hanya dalam hitungan detik setelah bayar lunas.</p>
+        </div>
+        <div>
+            <div class="form-section">
+                <h3><span class="step-num">1</span> Masukkan Data Akun</h3>
+                <div class="input-group">
+                    <input type="number" id="userId" placeholder="Masukkan Player ID HOK" required>
+                </div>
+            </div>
+            <div class="form-section">
+                <h3><span class="step-num">2</span> Pilih Nominal Tokens</h3>
+                <div class="nominal-grid">
+                    <div class="nominal-card" onclick="selectNominal('17 Tokens', 'Rp 4.000', this)">
+                        <h4>17 Tokens</h4><p>Rp 4.000</p>
+                    </div>
+                    <div class="nominal-card" onclick="selectNominal('88 Tokens', 'Rp 19.500', this)">
+                        <h4>88 Tokens</h4><p>Rp 19.500</p>
+                    </div>
+                    <div class="nominal-card" onclick="selectNominal('257 Tokens', 'Rp 56.000', this)">
+                        <h4>257 Tokens</h4><p>Rp 56.000</p>
+                    </div>
+                    <div class="nominal-card" onclick="selectNominal('432 Tokens', 'Rp 93.000', this)">
+                        <h4>432 Tokens</h4><p>Rp 93.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-section">
+                <h3><span class="step-num">3</span> Pilih Pembayaran</h3>
+                <div class="payment-list">
+                    <div class="payment-item" onclick="selectPayment('QRIS', this)"><span>📱 QRIS otomatis</span><b style="color: #2ecc71;">Otomatis</b></div>
+                    <div class="payment-item" onclick="selectPayment('BCA Manual', this)"><span>🏦 Bank BCA</span><b style="color: #f1c40f;">Manual</b></div>
+                </div>
+            </div>
+            <div class="form-section">
+                <h3><span class="step-num">4</span> Konfirmasi</h3>
+                <button class="btn-submit" onclick="prosesBayar()">Beli Sekarang 🚀</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let prod = "", harga = "", mtd = "";
+        function selectNominal(i, h, e) { document.querySelectorAll('.nominal-card').forEach(el=>el.classList.remove('active')); e.classList.add('active'); prod=i; harga=h; }
+        function selectPayment(m, e) { document.querySelectorAll('.payment-item').forEach(el=>el.classList.remove('active')); e.classList.add('active'); mtd=m; }
+        function prosesBayar() {
+            let id = document.getElementById('userId').value;
+            if(!id || !prod || !mtd) { alert("Mohon lengkapi data Player ID, Jumlah Tokens, dan pembayaran!"); return; }
+            alert(`✨ ORDERAN HOK GEMOY ✨\n\nPlayer ID: ${id}\nProduk: ${prod}\nHarga: ${harga}\nMetode: ${mtd}`);
+        }
+    </script>
+</body>
+</html>
