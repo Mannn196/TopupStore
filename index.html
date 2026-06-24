@@ -27,17 +27,34 @@
         /* Navbar */
         nav {
             background-color: var(--secondary);
-            padding: 15px 5%;
+            padding: 10px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 3px solid var(--primary);
         }
 
-        nav .logo {
-            font-size: 24px;
+        /* Gaya Logo Baru */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 50%; /* Membuat logo berbentuk bulat rapi */
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 8px rgba(255, 107, 129, 0.5);
+        }
+
+        nav .logo-text {
+            font-size: 22px;
             font-weight: bold;
             color: var(--primary);
+            letter-spacing: 0.5px;
         }
 
         /* Banner */
@@ -131,9 +148,12 @@
 </head>
 <body>
 
-    <!-- NAVIGASI -->
+    <!-- NAVIGASI DENGAN LOGO BARU -->
     <nav>
-        <div class="logo">🎀 GemoyTopUpSTORE</div>
+        <div class="logo-container">
+            <img src="https://i.ibb.co/n8NL5x2k/image.png" alt="Logo GemoyTopUpSTORE" class="logo-img">
+            <span class="logo-text">GemoyTopUpSTORE</span>
+        </div>
     </nav>
 
     <!-- BANNER UTAMA -->
